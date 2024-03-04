@@ -33,7 +33,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RepeatedTestsTest {
+class RepeatedTestsTest {
 
     private static Set<Integer> integerSet = new HashSet<>();
     private static List<Integer> integerList = new ArrayList<>();
