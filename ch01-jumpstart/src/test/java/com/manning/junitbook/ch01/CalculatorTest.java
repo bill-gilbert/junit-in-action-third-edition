@@ -22,14 +22,18 @@ package com.manning.junitbook.ch01;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 
-public class CalculatorTest {
+class CalculatorTest {
 
+    @DisplayName("Add Test")
     @Test
-    public void testAdd() {
+    void testAdd(TestInfo testInfo) {
         Calculator calculator = new Calculator();
         double result = calculator.add(10, 50);
         assertEquals(60, result, 0);
+        assertEquals("Add Test", testInfo.getDisplayName());
     }
 }
